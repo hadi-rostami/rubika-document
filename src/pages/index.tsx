@@ -404,7 +404,7 @@ export default function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description="مستندات کامل توسعه ربات‌های روبیکا با پایتون"
+      description="مستندات کامل توسعه ربات‌های روبیکا با تایپ‌اسکریپت"
     >
       <main className="flex-1">
         <HomepageHeader />

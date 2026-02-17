@@ -33,7 +33,7 @@ const config: Config = {
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
         // 🔍 تنظیمات اصلی
-        hashed: true, // برای کش بهتر
+        hashed: false, // برای کش بهتر
         language: [ "en"], // پشتیبانی از فارسی و انگلیسی
         indexDocs: true, // ایندکس کردن داکیومنت‌ها
         indexBlog: true, // ایندکس کردن بلاگ

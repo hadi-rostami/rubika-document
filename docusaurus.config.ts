@@ -12,13 +12,9 @@ const config: Config = {
     v4: true,
   },
 
-  // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+
+  url: "https://rubika-document.vercel.app/",
   baseUrl: "/",
-  organizationName: "facebook",
-  projectName: "docusaurus",
 
   onBrokenLinks: "ignore",
   i18n: {
@@ -33,7 +29,7 @@ const config: Config = {
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
         // 🔍 تنظیمات اصلی
-        hashed: false, // برای کش بهتر
+        hashed: true, // برای کش بهتر
         language: [ "en"], // پشتیبانی از فارسی و انگلیسی
         indexDocs: true, // ایندکس کردن داکیومنت‌ها
         indexBlog: true, // ایندکس کردن بلاگ

@@ -1,0 +1,29 @@
+rubika:
+  label: rubika
+  permalink: /rubika
+  description: مطالب، آموزش‌ها و نمونه‌کدهای مربوط به فریمورک rubika
+
+آموزش:
+  label: آموزش
+  permalink: /آموزش
+  description: مطالب آموزشی مربوط به rubika
+
+وبسایت:
+  label: وبسایت
+  permalink: /وبسایت
+  description: نحوه راه‌اندازی وب‌سایت در کنار ربات
+
+Node.js:
+  label: Node.js
+  permalink: /nodejs
+  description: مقالات مربوط به برنامه‌نویسی با Node.js، مخصوصاً در زمینه ربات‌نویسی و وب‌سرور
+
+موبایل:
+  label: موبایل
+  permalink: /موبایل
+  description: آموزش‌ها و ترفندهای اجرای کدها یا ربات‌ها روی موبایل
+
+Termux:
+  label: Termux
+  permalink: /termux
+  description: مطالب مرتبط با اجرای Node.js، rubika یا ابزارهای برنامه‌نویسی در محیط ترموکس

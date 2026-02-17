@@ -1,0 +1,127 @@
+@import "tailwindcss/theme.css" layer(theme);
+
+@layer base {
+  #tw-scope {
+    @import "tailwindcss/preflight.css" layer(base);
+  }
+}
+
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* @custom-variant dark (&:is([data-theme="dark"] *)); */
+
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+
+@font-face {
+  font-family: "Vazir";
+  src: url("/fonts/Vazir-Regular.woff");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.ttf");
+}
+
+html {
+  font-family: "Vazir", "Roboto", sans-serif;
+}
+/* =========================================
+   Search Local Custom Styles
+   ========================================= */
+
+:root {
+  --search-local-modal-width: 640px;
+  --search-local-modal-height: 600px;
+  --search-local-highlight-color: #f97316; /* نارنجی روبیکا */
+  --search-local-modal-background: #f8fafc;
+  --search-local-hit-background: #fff;
+  --search-local-hit-color: #1e293b;
+  --search-local-muted-color: #64748b;
+  --search-local-hit-active-color: #fff;
+  --search-local-footer-background: #f1f5f9;
+}
+
+html[data-theme="dark"] {
+  --search-local-modal-background: #1e293b;
+  --search-local-modal-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --search-local-hit-background: #334155;
+  --search-local-hit-color: #e2e8f0;
+  --search-local-highlight-color: #fb923c;
+  --search-local-muted-color: #94a3b8;
+  --search-local-hit-active-background: #f97316;
+  --search-local-footer-background: #0f172a;
+}
+
+/* فونت فارسی برای سرچ */
+.search-modal,
+.search-modal * {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
+
+/* استایل اینپوت */
+.search-modal input {
+  background: #0f172a !important;
+  border: 1px solid #334155 !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.95rem !important;
+}
+
+.search-modal input:focus {
+  border-color: #f97316 !important;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2) !important;
+}
+
+/* استایل نتایج */
+.search-modal .ds-hit-item {
+  border-radius: 8px !important;
+  margin: 0 0.5rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.search-modal .ds-hit-item:hover,
+.search-modal .ds-hit-item[aria-selected="true"] {
+  background: rgba(249, 115, 22, 0.1) !important;
+  border-color: rgba(249, 115, 22, 0.3) !important;
+}
+
+/* اسکرول‌بار زیبا */
+.search-modal .ds-dataset::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-modal .ds-dataset::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.search-modal .ds-dataset::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+.search-modal .ds-dataset::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

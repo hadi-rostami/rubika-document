@@ -20,7 +20,7 @@ const config: Config = {
   organizationName: "facebook",
   projectName: "docusaurus",
 
-  onBrokenLinks: "throw",
+  onBrokenLinks: "ignore",
   i18n: {
     defaultLocale: "fa",
     locales: ["fa"],

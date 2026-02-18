@@ -7,74 +7,134 @@ const config: Config = {
   // 🔹 تنظیمات پایه و هویت سایت
   // =========================================
   title: "Rubika Bot | مستندات رسمی توسعه ربات روبیکا",
-  tagline: "پکیج قدرتمند جاوااسکریپت/تایپ‌اسکریپت برای ساخت ربات‌های روبیکا. سریع، امن و کاملاً فارسی.",
-  
+  tagline:
+    "پکیج قدرتمند جاوااسکریپت/تایپ‌اسکریپت برای ساخت ربات‌های روبیکا. سریع، امن و کاملاً فارسی.",
+
   // متادیتای کامل برای گوگل و سوشال
   headTags: [
     // SEO Meta Tags
     {
-      tagName: 'meta',
+      tagName: "meta",
       attributes: {
-        name: 'description',
-        content: 'آموزش جامع و مستندات رسمی پکیج rubika برای توسعه ربات‌های روبیکا با تایپ‌اسکریپت. شامل راهنمای نصب، مثال‌های کاربردی و مرجع کامل API.',
+        name: "description",
+        content:
+          "آموزش جامع و مستندات رسمی پکیج rubika برای توسعه ربات‌های روبیکا با تایپ‌اسکریپت. شامل راهنمای نصب، مثال‌های کاربردی و مرجع کامل API.",
       },
     },
     {
-      tagName: 'meta',
+      tagName: "meta",
       attributes: {
-        name: 'keywords',
-        content: 'ربات روبیکا, توسعه ربات, rubika, javascript bot, typescript bot, آموزش روبیکا, API روبیکا, ساخت ربات تلگرامی, rubika sdk',
+        name: "keywords",
+        content:
+          "ربات روبیکا, توسعه ربات, rubika, javascript bot, typescript bot, آموزش روبیکا, API روبیکا, ساخت ربات تلگرامی, rubika sdk",
       },
     },
     {
-      tagName: 'meta',
+      tagName: "meta",
       attributes: {
-        name: 'author',
-        content: 'Hadi Rostami',
+        name: "author",
+        content: "Hadi Rostami",
       },
     },
     {
-      tagName: 'meta',
+      tagName: "meta",
       attributes: {
-        name: 'robots',
-        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+        name: "robots",
+        content:
+          "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       },
     },
-    
-    { tagName: 'meta', attributes: { property: 'og:type', content: 'website' } },
-    { tagName: 'meta', attributes: { property: 'og:url', content: 'https://rubika-document.vercel.app/' } },
-    { tagName: 'meta', attributes: { property: 'og:title', content: 'Rubika Bot | مستندات رسمی توسعه ربات' } },
+
     {
-      tagName: 'meta',
+      tagName: "meta",
+      attributes: { property: "og:type", content: "website" },
+    },
+    {
+      tagName: "meta",
       attributes: {
-        property: 'og:description',
-        content: 'پکیج قدرتمند تایپاسکریپت با bun برای ساخت ربات‌های روبیکا. سریع، امن و کاملاً فارسی.',
+        property: "og:url",
+        content: "https://rubika-document.vercel.app/",
       },
     },
-    { tagName: 'meta', attributes: { property: 'og:image', content: 'https://rubika-document.vercel.app/img/logo.jpg' } },
-    { tagName: 'meta', attributes: { property: 'og:image:width', content: '1200' } },
-    { tagName: 'meta', attributes: { property: 'og:image:height', content: '630' } },
-    { tagName: 'meta', attributes: { property: 'og:site_name', content: 'Rubika Bot Docs' } },
-    { tagName: 'meta', attributes: { property: 'og:locale', content: 'fa_IR' } },
-    
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:title",
+        content: "Rubika Bot | مستندات رسمی توسعه ربات",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:description",
+        content:
+          "پکیج قدرتمند تایپاسکریپت با bun برای ساخت ربات‌های روبیکا. سریع، امن و کاملاً فارسی.",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:image",
+        content: "https://rubika-document.vercel.app/img/logo.jpg",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: { property: "og:image:width", content: "1200" },
+    },
+    {
+      tagName: "meta",
+      attributes: { property: "og:image:height", content: "630" },
+    },
+    {
+      tagName: "meta",
+      attributes: { property: "og:site_name", content: "Rubika Bot Docs" },
+    },
+    {
+      tagName: "meta",
+      attributes: { property: "og:locale", content: "fa_IR" },
+    },
+
     // Twitter Card
-    { tagName: 'meta', attributes: { name: 'twitter:card', content: 'summary_large_image' } },
-    { tagName: 'meta', attributes: { name: 'twitter:title', content: 'Rubika Bot | مستندات رسمی' } },
     {
-      tagName: 'meta',
+      tagName: "meta",
+      attributes: { name: "twitter:card", content: "summary_large_image" },
+    },
+    {
+      tagName: "meta",
       attributes: {
-        name: 'twitter:description',
-        content: 'ساخت ربات روبیکا با جاوااسکریپت در چند دقیقه!',
+        name: "twitter:title",
+        content: "Rubika Bot | مستندات رسمی",
       },
     },
-    { tagName: 'meta', attributes: { name: 'twitter:image', content: 'https://rubika-document.vercel.app/img/logo.jpg' } },
-    
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:description",
+        content: "ساخت ربات روبیکا با جاوااسکریپت در چند دقیقه!",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "twitter:image",
+        content: "https://rubika-document.vercel.app/img/logo.jpg",
+      },
+    },
+
     // Canonical URL (برای جلوگیری از محتوای تکراری)
     {
-      tagName: 'link',
+      tagName: "link",
       attributes: {
-        rel: 'canonical',
-        href: 'https://rubika-document.vercel.app/',
+        rel: "canonical",
+        href: "https://rubika-document.vercel.app/",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "msvalidate.01",
+        content: "F220823714AB4D2E0A71E8BB27F629F6",
       },
     },
   ],
@@ -85,9 +145,9 @@ const config: Config = {
   // =========================================
   // 🔹 تنظیمات URL (بسیار مهم برای سئو)
   // =========================================
-  url: "https://rubika-document.vercel.app", 
+  url: "https://rubika-document.vercel.app",
   baseUrl: "/",
-  
+
   // مدیریت لینک‌های شکسته
   onBrokenLinks: "warn", // در پروداکشن بهتره throw باشه تا لینک خراب نداشته باشی
   onBrokenMarkdownLinks: "warn",
@@ -100,8 +160,8 @@ const config: Config = {
     locales: ["fa"],
     localeConfigs: {
       fa: {
-        htmlLang: 'fa-IR', // برای گوگل مهمه که بدونه سایت فارسیه
-        direction: 'rtl',
+        htmlLang: "fa-IR", // برای گوگل مهمه که بدونه سایت فارسیه
+        direction: "rtl",
       },
     },
   },
@@ -128,7 +188,6 @@ const config: Config = {
         removeDefaultStemmer: true,
         docsRouteBasePath: "/docs",
         blogRouteBasePath: "/blog",
-        
       },
     ],
   ],
@@ -143,13 +202,13 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           editUrl: "https://github.com/hadi-rostami/rubika-bot/edit/main/",
-          lastVersion: 'current',
-          showLastUpdateAuthor:true,
-          showLastUpdateTime:true,
+          lastVersion: "current",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           versions: {
             current: {
-              label: 'v1.1.0',
-              path: '/',
+              label: "v1.1.0",
+              path: "/",
             },
           },
         },
@@ -172,15 +231,15 @@ const config: Config = {
         },
         // ⭐ پلاگین سایت‌مپ برای ایندکس شدن در گوگل
         sitemap: {
-          changefreq: 'weekly',
+          changefreq: "weekly",
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
-          filename: 'sitemap.xml',
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
           createSitemapItems: async (params) => {
             const { defaultCreateSitemapItems, ...rest } = params;
             const items = await defaultCreateSitemapItems(rest);
             // حذف صفحات تکراری یا کم‌ارزش از سایت‌مپ
-            return items.filter((item) => !item.url.includes('/page/'));
+            return items.filter((item) => !item.url.includes("/page/"));
           },
         },
       } satisfies Preset.Options,
@@ -195,15 +254,15 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
       disableSwitch: false,
-      defaultMode: 'dark', // حالت پیش‌فرض دارک برای تجربه کاربری بهتر
+      defaultMode: "dark", // حالت پیش‌فرض دارک برای تجربه کاربری بهتر
     },
-    
+
     // متادیتای اضافه برای تم
     metadata: [
-      { name: 'application-name', content: 'Rubika Bot Docs' },
-      { name: 'apple-mobile-web-app-title', content: 'Rubika Bot' },
-      { name: 'theme-color', content: '#f97316' }, // رنگ نارنجی روبیکا
-      { name: 'msapplication-TileColor', content: '#f97316' },
+      { name: "application-name", content: "Rubika Bot Docs" },
+      { name: "apple-mobile-web-app-title", content: "Rubika Bot" },
+      { name: "theme-color", content: "#f97316" }, // رنگ نارنجی روبیکا
+      { name: "msapplication-TileColor", content: "#f97316" },
     ],
 
     navbar: {
@@ -230,41 +289,43 @@ const config: Config = {
           position: "right",
           // لینک‌های خارجی بهتره با target="_blank" باز بشن (داکسیوروس خودکار این کار رو می‌کنه)
           attributes: {
-            target: '_blank',
-            rel: 'noopener noreferrer', // برای امنیت و سئو
+            target: "_blank",
+            rel: "noopener noreferrer", // برای امنیت و سئو
           },
         },
       ],
     },
-    
+
     footer: {
       style: "dark",
       links: [
         {
-          title: 'مستندات',
+          title: "مستندات",
           items: [
-            { label: 'شروع سریع', to: '/docs/intro' },
-            { label: 'نصب و راه‌اندازی', to: '/docs/installation' },
-            { label: 'مرجع API', to: '/docs/api' },
+            { label: "شروع سریع", to: "/docs/intro" },
+            { label: "نصب و راه‌اندازی", to: "/docs/installation" },
+            { label: "مرجع API", to: "/docs/api" },
           ],
         },
         {
-          title: 'جامعه',
+          title: "جامعه",
           items: [
-            { label: 'گیت‌هاب', href: 'https://github.com/hadi-rostami/rubika-bot' },
-            { label: 'تلگرام', href: 'https://t.me/your_channel' },
+            {
+              label: "گیت‌هاب",
+              href: "https://github.com/hadi-rostami/rubika-bot",
+            },
+            { label: "تلگرام", href: "https://t.me/your_channel" },
           ],
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Rubika Bot. Built with Docusaurus.`,
     },
-    
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['bash', 'json'], // برای هایلایت بهتر کدها
+      additionalLanguages: ["bash", "json"], // برای هایلایت بهتر کدها
     },
-    
   } satisfies Preset.ThemeConfig,
 };
 

@@ -324,8 +324,7 @@ bot.run();`;
 
           {/* Code Window */}
           <div className="relative">
-
-            <div className="relative bg-[#1e1e1e] rounded-xl  overflow-hidden shadow-green-700/5 shadow-lg border border-gray-700">
+            <div className="relative bg-[#1e1e1e] rounded-xl w-full  overflow-hidden shadow-green-700/5 shadow-lg border border-gray-700">
               {/* Window Header */}
               <div className="flex items-center justify-between px-4 py-3 bg-[#252526] border-b border-slate-700">
                 <div className="flex gap-1.5 items-center ">
@@ -339,9 +338,9 @@ bot.run();`;
               </div>
 
               {/* Code */}
-              <div className="overflow-x-auto ">
+              <div className="overflow-x-auto">
                 <SyntaxHighlighter
-                  language="js"
+                  language="ts"
                   style={vscDarkPlus}
                   customStyle={{
                     background: "#1e1e1e",

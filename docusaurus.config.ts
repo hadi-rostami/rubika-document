@@ -3,119 +3,268 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "rubika document | داکیومنت روبیکا",
-  tagline:
-    "پکیج قدرتمند جاوااسکریپت برای توسعه ربات‌های روبیکا. با امکانات کامل، امنیت بالا و مستندات فارسی، ایده‌های خود را به واقعیت تبدیل کنید.",
+  // =========================================
+  // 🔹 تنظیمات پایه و هویت سایت
+  // =========================================
+  title: "Rubika Bot | مستندات رسمی توسعه ربات روبیکا",
+  tagline: "پکیج قدرتمند جاوااسکریپت/تایپ‌اسکریپت برای ساخت ربات‌های روبیکا. سریع، امن و کاملاً فارسی.",
+  
+  // متادیتای کامل برای گوگل و سوشال
+  headTags: [
+    // SEO Meta Tags
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'description',
+        content: 'آموزش جامع و مستندات رسمی پکیج rubika برای توسعه ربات‌های روبیکا با تایپ‌اسکریپت. شامل راهنمای نصب، مثال‌های کاربردی و مرجع کامل API.',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'keywords',
+        content: 'ربات روبیکا, توسعه ربات, rubika, javascript bot, typescript bot, آموزش روبیکا, API روبیکا, ساخت ربات تلگرامی, rubika sdk',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'author',
+        content: 'Hadi Rostami',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'robots',
+        content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+      },
+    },
+    
+    { tagName: 'meta', attributes: { property: 'og:type', content: 'website' } },
+    { tagName: 'meta', attributes: { property: 'og:url', content: 'https://rubika-document.vercel.app/' } },
+    { tagName: 'meta', attributes: { property: 'og:title', content: 'Rubika Bot | مستندات رسمی توسعه ربات' } },
+    {
+      tagName: 'meta',
+      attributes: {
+        property: 'og:description',
+        content: 'پکیج قدرتمند تایپاسکریپت با bun برای ساخت ربات‌های روبیکا. سریع، امن و کاملاً فارسی.',
+      },
+    },
+    { tagName: 'meta', attributes: { property: 'og:image', content: 'https://rubika-document.vercel.app/img/logo.jpg' } },
+    { tagName: 'meta', attributes: { property: 'og:image:width', content: '1200' } },
+    { tagName: 'meta', attributes: { property: 'og:image:height', content: '630' } },
+    { tagName: 'meta', attributes: { property: 'og:site_name', content: 'Rubika Bot Docs' } },
+    { tagName: 'meta', attributes: { property: 'og:locale', content: 'fa_IR' } },
+    
+    // Twitter Card
+    { tagName: 'meta', attributes: { name: 'twitter:card', content: 'summary_large_image' } },
+    { tagName: 'meta', attributes: { name: 'twitter:title', content: 'Rubika Bot | مستندات رسمی' } },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'twitter:description',
+        content: 'ساخت ربات روبیکا با جاوااسکریپت در چند دقیقه!',
+      },
+    },
+    { tagName: 'meta', attributes: { name: 'twitter:image', content: 'https://rubika-document.vercel.app/img/logo.jpg' } },
+    
+    // Canonical URL (برای جلوگیری از محتوای تکراری)
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'canonical',
+        href: 'https://rubika-document.vercel.app/',
+      },
+    },
+  ],
+
   favicon: "img/logo.jpg",
+  future: { v4: true },
 
-  future: {
-    v4: true,
-  },
-
-
-  url: "https://rubika-document.vercel.app/",
+  // =========================================
+  // 🔹 تنظیمات URL (بسیار مهم برای سئو)
+  // =========================================
+  url: "https://rubika-document.vercel.app", 
   baseUrl: "/",
+  
+  // مدیریت لینک‌های شکسته
+  onBrokenLinks: "warn", // در پروداکشن بهتره throw باشه تا لینک خراب نداشته باشی
+  onBrokenMarkdownLinks: "warn",
 
-  onBrokenLinks: "ignore",
+  // =========================================
+  // 🔹 تنظیمات زبان (SEO فارسی)
+  // =========================================
   i18n: {
     defaultLocale: "fa",
     locales: ["fa"],
+    localeConfigs: {
+      fa: {
+        htmlLang: 'fa-IR', // برای گوگل مهمه که بدونه سایت فارسیه
+        direction: 'rtl',
+      },
+    },
   },
 
+  // =========================================
+  // 🔹 پلاگین‌ها
+  // =========================================
   plugins: [
     "./src/plugins/tailwind-config.ts",
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
-      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-      ({
-        // 🔍 تنظیمات اصلی
-        hashed: true, // برای کش بهتر
-        language: [ "en"], // پشتیبانی از فارسی و انگلیسی
-        indexDocs: true, // ایندکس کردن داکیومنت‌ها
-        indexBlog: true, // ایندکس کردن بلاگ
-        indexPages: true, // ایندکس کردن صفحات
-        docsDir: "docs", // پوشه داکیومنت‌ها
-        blogDir: "blog", // پوشه بلاگ
-        
-        // 🎨 تنظیمات ظاهری
-        searchResultLimits: 10, // حداکثر نتایج نمایش
-        searchResultContextMaxLength: 50, // طول متن نمایش داده شده
-        explicitSearchResultPath: true, // نمایش مسیر کامل
-        hideSearchBarWithNoSearchContext: false,
-        
-        // 🌐 تنظیمات زبان فارسی
-        highlightSearchTermsOnTargetPage: true,
-        removeDefaultStopWordFilter: true, // برای فارسی مهمه
+      {
+        hashed: true,
+        language: ["en"],
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: true,
+        docsDir: "docs",
+        blogDir: "blog",
+        searchResultLimits: 10,
+        searchResultContextMaxLength: 50,
+        explicitSearchResultPath: true,
+        removeDefaultStopWordFilter: true,
         removeDefaultStemmer: true,
-        
-        // 📍 محل نمایش سرچ
         docsRouteBasePath: "/docs",
         blogRouteBasePath: "/blog",
-      }),
+        
+      },
     ],
   ],
 
+  // =========================================
+  // 🔹 پریست‌های کلاسیک (Docs + Blog + Sitemap)
+  // =========================================
   presets: [
     [
       "classic",
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/hadi-rostami/rubika-bot/tree/main/packages/create-docusaurus/templates/shared/",
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
+          editUrl: "https://github.com/hadi-rostami/rubika-bot/edit/main/",
+          lastVersion: 'current',
+          showLastUpdateAuthor:true,
+          showLastUpdateTime:true,
+          versions: {
+            current: {
+              label: 'v1.1.0',
+              path: '/',
+            },
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/hadi-rostami/rubika-bot/tree/main/packages/create-docusaurus/templates/shared/",
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
         },
+        // blog: {
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ["rss", "atom"],
+        //     xslt: true,
+        //   },
+        //   editUrl: "https://github.com/hadi-rostami/rubika-bot/edit/main/"
+        //   onInlineTags: "warn",
+        //   onInlineAuthors: "warn",
+        //   onUntruncatedBlogPosts: "warn",
+        //   // سئوی بلاگ
+        //   blogSidebarCount: 'ALL',
+        //   blogSidebarTitle: 'تمامی مقالات',
+        // },
         theme: {
           customCss: "./src/css/custom.css",
+        },
+        // ⭐ پلاگین سایت‌مپ برای ایندکس شدن در گوگل
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+          createSitemapItems: async (params) => {
+            const { defaultCreateSitemapItems, ...rest } = params;
+            const items = await defaultCreateSitemapItems(rest);
+            // حذف صفحات تکراری یا کم‌ارزش از سایت‌مپ
+            return items.filter((item) => !item.url.includes('/page/'));
+          },
         },
       } satisfies Preset.Options,
     ],
   ],
 
+  // =========================================
+  // 🔹 تنظیمات تم و ظاهر
+  // =========================================
   themeConfig: {
-    // Replace with your project's social card
-    image: "img/logo.jpg",
+    image: "img/og-image.jpg", // تصویر پیش‌فرض برای اشتراک‌گذاری
     colorMode: {
       respectPrefersColorScheme: true,
+      disableSwitch: false,
+      defaultMode: 'dark', // حالت پیش‌فرض دارک برای تجربه کاربری بهتر
     },
+    
+    // متادیتای اضافه برای تم
+    metadata: [
+      { name: 'application-name', content: 'Rubika Bot Docs' },
+      { name: 'apple-mobile-web-app-title', content: 'Rubika Bot' },
+      { name: 'theme-color', content: '#f97316' }, // رنگ نارنجی روبیکا
+      { name: 'msapplication-TileColor', content: '#f97316' },
+    ],
+
     navbar: {
       title: "Rubika v1.1.0",
+      logo: {
+        alt: "Rubika Bot Logo", // ⭐ متن جایگزین لوگو برای سئو
+        src: "img/logo.jpg",
+      },
       items: [
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
           label: "مستندات",
-        },        {
+        },
+        // {
+        //   to: "/blog",
+        //   label: "بلاگ",
+        //   position: "left",
+        // },
+        {
           href: "https://github.com/hadi-rostami/rubika-bot",
           label: "GitHub",
           position: "right",
+          // لینک‌های خارجی بهتره با target="_blank" باز بشن (داکسیوروس خودکار این کار رو می‌کنه)
+          attributes: {
+            target: '_blank',
+            rel: 'noopener noreferrer', // برای امنیت و سئو
+          },
         },
       ],
     },
+    
     footer: {
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      style: "dark",
+      links: [
+        {
+          title: 'مستندات',
+          items: [
+            { label: 'شروع سریع', to: '/docs/intro' },
+            { label: 'نصب و راه‌اندازی', to: '/docs/installation' },
+            { label: 'مرجع API', to: '/docs/api' },
+          ],
+        },
+        {
+          title: 'جامعه',
+          items: [
+            { label: 'گیت‌هاب', href: 'https://github.com/hadi-rostami/rubika-bot' },
+            { label: 'تلگرام', href: 'https://t.me/your_channel' },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Rubika Bot. Built with Docusaurus.`,
     },
+    
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash', 'json'], // برای هایلایت بهتر کدها
     },
+    
   } satisfies Preset.ThemeConfig,
 };
 

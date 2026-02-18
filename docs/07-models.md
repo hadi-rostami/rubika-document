@@ -1,3 +1,15 @@
+---
+slug: /models
+sidebar_position: 3
+id: learn-bot-models
+sidebar_label: مدل‌ها و انوم‌ها
+
+last_update:
+  date: '2026-02-18'
+  author: 'hadi-rostami'
+---
+
+
 # مدل‌ها
 
 ## Enums

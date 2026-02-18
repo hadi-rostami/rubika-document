@@ -277,14 +277,14 @@ bot.run();`;
         <div className="absolute top-1/3 -right-40 w-80 h-80 bg-green-500/10 rounded-full blur-[100px]"></div>
         <div className="absolute -bottom-40 left-0 w-72 h-72 bg-green-500/10 rounded-full blur-[100px]"></div>
       </div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container  mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-10 items-center">
           {/* Content */}
-          <div className="text-start space-y-6">
+          <div className="text-start space-y-6 flex-1">
             <h2 className="text-3xl sm:text-4xl font-bold ">
               شروع کار در ۳ دقیقه
             </h2>
-            <p className="text-slate-400 text-lg leading-relaxed">
+            <p className="text-slate-400 text-justify text-lg leading-relaxed">
               نصب و راه‌اندازی ربات شما بسیار ساده است. فقط کافیست پکیج را نصب
               کنید و چند خط کد بنویسید. این پکیج تمام پیچیدگی‌های پروتکل روبیکا
               را برای شما مدیریت می‌کند.
@@ -323,9 +323,9 @@ bot.run();`;
           </div>
 
           {/* Code Window */}
-          <div className="relative">
-            <div className="relative bg-[#1e1e1e] rounded-xl  max-w-[100%-32px] mx-auto  overflow-hidden shadow-green-700/5 shadow-lg border border-gray-700">
-              {/* Window Header */}
+          <div className="relative w-full flex-1">
+            <div className="relative bg-[#1e1e1e] rounded-xl max-w-[calc(100%-32px)] mx-auto w-full overflow-hidden shadow-green-700/5 shadow-lg border border-gray-700">
+
               <div className="flex items-center justify-between px-4 py-3 bg-[#252526] border-b border-slate-700">
                 <div className="flex gap-1.5 items-center ">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -337,7 +337,7 @@ bot.run();`;
                 </div>
               </div>
 
-              {/* Code */}
+    
               <div className="overflow-x-auto">
                 <SyntaxHighlighter
                   language="ts"

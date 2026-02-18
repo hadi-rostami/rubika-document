@@ -324,7 +324,7 @@ bot.run();`;
 
           {/* Code Window */}
           <div className="relative w-full flex-1">
-            <div className="relative bg-[#1e1e1e] rounded-xl max-w-[calc(100%-32px)] mx-auto w-full overflow-hidden shadow-green-700/5 shadow-lg border border-gray-700">
+            <div className="relative bg-[#1e1e1e] rounded-xl mx-auto w-full overflow-hidden shadow-green-700/5 shadow-lg border border-gray-700">
 
               <div className="flex items-center justify-between px-4 py-3 bg-[#252526] border-b border-slate-700">
                 <div className="flex gap-1.5 items-center ">

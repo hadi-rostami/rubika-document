@@ -266,7 +266,7 @@ const config: Config = {
     ],
 
     navbar: {
-      title: "Rubika v1.1.0",
+      title: "Rubika v1.2.0",
       logo: {
         alt: "Rubika Bot Logo", // ⭐ متن جایگزین لوگو برای سئو
         src: "img/logo.jpg",

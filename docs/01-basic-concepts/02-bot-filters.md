@@ -5,7 +5,7 @@ sidebar_position: 2
 sidebar_label: کلاس Filters
 
 last_update:
-  date: '2026-02-18'
+  date: '2026-02-22'
   author: 'hadi-rostami'
 ---
 
@@ -199,7 +199,7 @@ last_update:
 #### مثال:
 
 ```ts
-import Bot, { Filters } from "rubika";
+import Bot, { Filters } from "rubika/bot";
 
 const bot = new Bot("YOUR_TOKEN");
 

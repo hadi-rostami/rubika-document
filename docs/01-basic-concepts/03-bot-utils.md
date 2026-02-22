@@ -5,7 +5,7 @@ sidebar_position: 2
 sidebar_label: کلاس Utils
 
 last_update:
-  date: '2026-02-18'
+  date: '2026-02-22'
   author: 'hadi-rostami'
 ---
 
@@ -127,7 +127,7 @@ Utils.HyperLink("Google", "https://google.com");
 در اینجا نحوه استفاده از این کلاس را در یک هندلر ربات مشاهده می‌کنید:
 
 ```ts
-import Bot, { Utils } from "rubika";
+import Bot, { Utils } from "rubika/bot";
 
 const bot = new Bot("YOUR_TOKEN");
 

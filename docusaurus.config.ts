@@ -207,7 +207,7 @@ const config: Config = {
           showLastUpdateTime: true,
           versions: {
             current: {
-              label: "v1.1.0",
+              label: "v1.2.0",
               path: "/",
             },
           },

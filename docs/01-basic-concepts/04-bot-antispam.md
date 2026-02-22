@@ -5,7 +5,7 @@ sidebar_position: 2
 sidebar_label: کلاس AntiSpam 
 
 last_update:
-  date: '2026-02-18'
+  date: '2026-02-22'
   author: 'hadi-rostami'
 ---
 
@@ -52,7 +52,7 @@ last_update:
 در این مثال، ما یک سیستم ضد اسپم راه‌اندازی می‌کنیم که اگر کاربری بیش از ۴ پیام در ۵ ثانیه ارسال کرد، ربات واکنش نشان می‌دهد.
 
 ```ts
-import Bot, { AntiSpam } from "rubika";
+import Bot, { AntiSpam } from "rubika/bot";
 
 const bot = new Bot("YOUR_TOKEN");
 

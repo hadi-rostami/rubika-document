@@ -18,7 +18,7 @@ last_update:
 | نام    | نوع                                                                  | توضیح      |
 | ------ | -------------------------------------------------------------------- | ---------- |
 | `url`  | `string`                                                             | آدرس وبهوک |
-| `type` | [UpdateEndpointTypeEnum](/docs/robot/models/#updateendpointtypeenum) | نوع آدرس   |
+| `type` | [UpdateEndpointTypeEnum](/docs/models/#updateendpointtypeenum) | نوع آدرس   |
 
 ## خروجی
 
@@ -29,7 +29,7 @@ last_update:
 ## نحوه استفاده
 
 ```js
-import Bot from "rubika";
+import Bot from "rubika/bot"
 
 const bot = new Bot("YOUR_TOKEN");
 

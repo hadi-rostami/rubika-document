@@ -36,7 +36,7 @@ last_update:
 ### استفاده ساده
 
 ```js
-import Bot from "rubika";
+import Bot from "rubika/bot"
 
 const bot = new Bot("YOUR_TOKEN");
 
@@ -57,6 +57,25 @@ const bot = new Bot("YOUR_TOKEN");
 bot.command(/\/echo (.+)/, [Filters.isText], async (ctx) => {
   const text = ctx.text.match(/\/echo (.+)/)[1];
   await ctx.reply(`پیام شما: ${text}`);
+});
+
+bot.run();
+```
+
+### استفاده پیشرفته
+
+```js
+import Bot from "rubika/bot"
+
+const bot = new Bot("YOUR_TOKEN");
+
+type StoreType = {
+  user: string;
+  group: string;
+};
+
+bot.command<StoreType>("/message", async (ctx) => {
+  console.log(ctx.store.user);
 });
 
 bot.run();

@@ -18,7 +18,7 @@ last_update:
 | نام        | نوع                                     | توضیح                                  |
 | ---------- | --------------------------------------- | -------------------------------------- |
 | `chat_id`  | `string`                                | آیدی چتی که پیام باید به آن ارسال شود. |
-| `commands` | [Commend[]](/docs/robot/models#commend) | لیست دستورات                           |
+| `commands` | [Commend[]](/docs/models#commend) | لیست دستورات                           |
 
 ## خروجی
 
@@ -29,7 +29,7 @@ last_update:
 ## نحوه استفاده
 
 ```js
-import Bot from "rubika";
+import Bot from "rubika/bot"
 
 const bot = new Bot("YOUR_TOKEN");
 

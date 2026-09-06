@@ -13,14 +13,14 @@ const config: Config = {
   // متادیتای کامل برای گوگل و سوشال
   headTags: [
     // SEO Meta Tags
-    {
-      tagName: "meta",
-      attributes: {
-        name: "description",
-        content:
-          "آموزش جامع و مستندات رسمی پکیج rubika برای توسعه ربات‌های روبیکا با تایپ‌اسکریپت. شامل راهنمای نصب، مثال‌های کاربردی و مرجع کامل API.",
-      },
-    },
+    // {
+    //   tagName: "meta",
+    //   attributes: {
+    //     name: "description",
+    //     content:
+    //       "آموزش جامع و مستندات رسمی پکیج rubika برای توسعه ربات‌های روبیکا با تایپ‌اسکریپت. شامل راهنمای نصب، مثال‌های کاربردی و مرجع کامل API.",
+    //   },
+    // },
     {
       tagName: "meta",
       attributes: {
@@ -53,7 +53,7 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         property: "og:url",
-        content: "https://rubika-document.vercel.app/",
+        content: "https://docs.hr-dev.ir/",
       },
     },
     {
@@ -75,7 +75,7 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         property: "og:image",
-        content: "https://rubika-document.vercel.app/img/logo.jpg",
+        content: "https://docs.hr-dev.ir/img/logo.jpg",
       },
     },
     {
@@ -118,18 +118,10 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         name: "twitter:image",
-        content: "https://rubika-document.vercel.app/img/logo.jpg",
+        content: "https://docs.hr-dev.ir/img/logo.jpg",
       },
     },
 
-    // Canonical URL (برای جلوگیری از محتوای تکراری)
-    {
-      tagName: "link",
-      attributes: {
-        rel: "canonical",
-        href: "https://rubika-document.vercel.app/",
-      },
-    },
     {
       tagName: "meta",
       attributes: {
@@ -145,12 +137,11 @@ const config: Config = {
   // =========================================
   // 🔹 تنظیمات URL (بسیار مهم برای سئو)
   // =========================================
-  url: "https://rubika-document.vercel.app",
+  url: "https://docs.hr-dev.ir",
   baseUrl: "/",
 
   // مدیریت لینک‌های شکسته
-  onBrokenLinks: "warn", // در پروداکشن بهتره throw باشه تا لینک خراب نداشته باشی
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "warn",
 
   // =========================================
   // 🔹 تنظیمات زبان (SEO فارسی)
@@ -160,9 +151,15 @@ const config: Config = {
     locales: ["fa"],
     localeConfigs: {
       fa: {
-        htmlLang: "fa-IR", // برای گوگل مهمه که بدونه سایت فارسیه
+        htmlLang: "fa-IR",
         direction: "rtl",
       },
+    },
+  },
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
     },
   },
 
@@ -207,7 +204,7 @@ const config: Config = {
           showLastUpdateTime: true,
           versions: {
             current: {
-              label: "v1.2.0",
+              label: "v1.2.7",
               path: "/",
             },
           },
@@ -266,7 +263,7 @@ const config: Config = {
     ],
 
     navbar: {
-      title: "Rubika v1.2.0",
+      title: "Rubika v1.2.7",
       logo: {
         alt: "Rubika Bot Logo", // ⭐ متن جایگزین لوگو برای سئو
         src: "img/logo.jpg",
@@ -304,7 +301,6 @@ const config: Config = {
           items: [
             { label: "شروع سریع", to: "/docs/intro" },
             { label: "نصب و راه‌اندازی", to: "/docs/installation" },
-            { label: "مرجع API", to: "/docs/api" },
           ],
         },
         {
@@ -315,6 +311,7 @@ const config: Config = {
               href: "https://github.com/hadi-rostami/rubika-bot",
             },
             { label: "تلگرام", href: "https://t.me/your_channel" },
+            { label: "روبیکا", href: "https://rubika.ir/rubika_ts" },
           ],
         },
       ],

@@ -19,11 +19,11 @@ last_update:
 | ---------------------- | ----------------------------------------------------------------------- | --------------------------------------------------- |
 | `chat_id`              | `string`                                                                | آیدی چتی که پیام باید به آن ارسال شود.              |
 | `text`                 | `string`                                                                | متن پیام                                            |
-| `chat_keypad`          | [Keypad](/docs/robot/models#keypad) _(اختیاری)_                         | کیبورد معمولی (Reply Keyboard) برای پیام.           |
-| `inline_keypad`        | [InlineKeypad](/docs/robot/models#inlinekeypad) _(اختیاری)_             | کیبورد اینلاین همراه پیام.                          |
+| `chat_keypad`          | [Keypad](/docs/models#keypad) _(اختیاری)_                         | کیبورد معمولی (Reply Keyboard) برای پیام.           |
+| `inline_keypad`        | [InlineKeypad](/docs/models#inlinekeypad) _(اختیاری)_             | کیبورد اینلاین همراه پیام.                          |
 | `disable_notification` | `boolean` _(پیش‌فرض: false)_                                            | اگر `true` باشد، پیام بدون نوتیفیکیشن ارسال می‌شود. |
 | `reply_to_message_id`  | `string` _(اختیاری)_                                                    | در صورت تعیین، پیام به این پیام پاسخ داده می‌شود.   |
-| `chat_keypad_type`     | [ChatKeypadTypeEnum](/docs/robot/models#chatkeypadtypeenum) _(اختیاری)_ | نوع کیبورد برای ساخت یا تنظیم کیبورد چت.            |
+| `chat_keypad_type`     | [ChatKeypadTypeEnum](/docs/models#chatkeypadtypeenum) _(اختیاری)_ | نوع کیبورد برای ساخت یا تنظیم کیبورد چت.            |
 
 ## خروجی
 
@@ -36,7 +36,7 @@ last_update:
 ### 1. ارسال پیام ساده متنی
 
 ```ts
-import Bot from "rubika";
+import Bot from "rubika/bot"
 
 const bot = new Bot("YOUR_TOKEN");
 
@@ -52,7 +52,7 @@ bot.run();
 ### 2. ارسال پیام با کیبورد Reply (chat_keypad)
 
 ```ts
-import Bot from "rubika";
+import Bot from "rubika/bot"
 
 const bot = new Bot("YOUR_TOKEN");
 
@@ -77,7 +77,7 @@ bot.run();
 ### 3. ارسال پیام با کیبورد اینلاین (inline_keypad)
 
 ```ts
-import Bot from "rubika";
+import Bot from "rubika/bot"
 
 const bot = new Bot("YOUR_TOKEN");
 
@@ -100,7 +100,7 @@ bot.run();
 ### 4. ارسال پیام بدون نوتیفیکیشن
 
 ```ts
-import Bot from "rubika";
+import Bot from "rubika/bot"
 
 const bot = new Bot("YOUR_TOKEN");
 
@@ -120,7 +120,7 @@ bot.run();
 ### 5. ارسال پیام در پاسخ به یک پیام دیگر
 
 ```ts
-import Bot from "rubika";
+import Bot from "rubika/bot"
 
 const bot = new Bot("YOUR_TOKEN");
 

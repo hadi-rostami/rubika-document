@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rubika-document.vercel.app/sitemap.xml
+Sitemap: https://docs.hr-dev.ir/sitemap.xml

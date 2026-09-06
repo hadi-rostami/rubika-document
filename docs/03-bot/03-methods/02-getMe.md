@@ -21,14 +21,14 @@ last_update:
 
 | فیلد | نوع | توضیح        |
 | ---- | --- | ------------ |
-| bot  | [Bot](/docs/robot/models#bot) | اطلاعات ربات |
+| bot  | [Bot](/docs/models#bot) | اطلاعات ربات |
 
 ---
 
 ## نحوه استفاده
 
 ```js
-import Bot from "rubika";
+import Bot from "rubika/bot"
 
 const bot = new Bot("YOUR_TOKEN");
 

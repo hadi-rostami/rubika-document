@@ -26,12 +26,12 @@ last_update:
 | `url`     | `string`                                                                  | `undefined`                             | آدرس کامل وب‌هوک (برای ثبت در سرور روبیکا)                |
 | `host`    | `string`                                                                  | `undefined`                             | آدرس شبکه‌ای سرور محلی (برای استفاده در `fastify.listen`) |
 | `port`    | `number`                                                                  | `3000`                                  | پورتی که سرور محلی روی آن بالا می‌آید                     |
-| `updates` | [UpdateEndpointTypeEnum[]](/docs/robot/models#updateendpointtypeenum) | `[ReceiveUpdate, ReceiveInlineMessage]` | نوع به‌روزرسانی‌هایی که ربات باید دریافت کند              |
+| `updates` | [UpdateEndpointTypeEnum[]](/docs/models#updateendpointtypeenum) | `[ReceiveUpdate, ReceiveInlineMessage]` | نوع به‌روزرسانی‌هایی که ربات باید دریافت کند              |
 
 ### استفاده
 
 ```js
-import Bot from "rubika";
+import Bot from "rubika/bot"
 
 const bot = new Bot("YOUR_TOKEN");
 

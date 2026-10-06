@@ -204,7 +204,7 @@ const config: Config = {
           showLastUpdateTime: true,
           versions: {
             current: {
-              label: "v1.2.7",
+              label: "v1.2.8",
               path: "/",
             },
           },
@@ -263,7 +263,7 @@ const config: Config = {
     ],
 
     navbar: {
-      title: "Rubika v1.2.7",
+      title: "Rubika v1.2.8",
       logo: {
         alt: "Rubika Bot Logo", // ⭐ متن جایگزین لوگو برای سئو
         src: "img/logo.jpg",
